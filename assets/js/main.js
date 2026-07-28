@@ -50,7 +50,7 @@
     var lbCaption = lightbox.querySelector(".lightbox-caption span");
     var closeBtn = lightbox.querySelector(".lightbox-close");
 
-    document.querySelectorAll(".timeline-item .thumb").forEach(function (thumb) {
+    document.querySelectorAll(".thumb").forEach(function (thumb) {
       thumb.addEventListener("click", function (e) {
         e.preventDefault();
         var img = thumb.querySelector("img");
