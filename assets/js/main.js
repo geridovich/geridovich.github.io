@@ -54,7 +54,8 @@
       thumb.addEventListener("click", function (e) {
         e.preventDefault();
         var img = thumb.querySelector("img");
-        lbImg.src = img.src;
+        // The <img> is a small thumbnail; the link's href points at the full-size scan.
+        lbImg.src = thumb.getAttribute("href") || img.src;
         lbImg.alt = img.alt;
         lbCaption.textContent = img.alt;
         lightbox.classList.add("is-open");
