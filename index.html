@@ -7,11 +7,16 @@
 <meta name="description" content="Адвокат Юлия Геридович — практика с 2009 года в Санкт-Петербурге. Гражданские и уголовные дела, споры с УК и застройщиками. Рейтинг 4.9 на Яндекс Картах.">
 <link rel="canonical" href="https://geridovich.ru/">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://geridovich.ru/">
 <meta property="og:title" content="Юлия Геридович — адвокат в Санкт-Петербурге">
 <meta property="og:description" content="Адвокатская практика с 2009 года. Гражданские, уголовные, административные дела. Консультация и представительство в суде.">
 <meta property="og:image" content="https://geridovich.ru/assets/img/portrait-hero.jpg">
 <meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="/assets/css/style.css">
 <script type="application/ld+json">
 {
@@ -29,12 +34,43 @@
     "addressLocality": "Санкт-Петербург",
     "addressCountry": "RU"
   },
-  "areaServed": "Санкт-Петербург",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "59.8988",
+    "longitude": "30.2724"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Санкт-Петербург"},
+    {"@type": "AdministrativeArea", "name": "Ленинградская область"}
+  ],
+  "knowsLanguage": "ru",
+  "currenciesAccepted": "RUB",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "10:00",
+    "closes": "19:00"
+  },
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
     "reviewCount": "104"
   },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Услуги адвоката",
+    "itemListElement": [
+      {"@type": "Offer", "priceCurrency": "RUB", "price": "5000", "itemOffered": {"@type": "Service", "name": "Устная консультация по правовым вопросам", "serviceType": "Юридическая консультация"}, "url": "https://geridovich.ru/pricing.html"},
+      {"@type": "Offer", "priceCurrency": "RUB", "price": "20000", "priceSpecification": {"@type": "PriceSpecification", "minPrice": "20000", "priceCurrency": "RUB"}, "itemOffered": {"@type": "Service", "name": "Составление правовых документов", "serviceType": "Подготовка процессуальных документов"}, "url": "https://geridovich.ru/pricing.html"},
+      {"@type": "Offer", "priceCurrency": "RUB", "price": "15000", "priceSpecification": {"@type": "PriceSpecification", "minPrice": "15000", "priceCurrency": "RUB"}, "itemOffered": {"@type": "Service", "name": "Ведение судебных дел в суде первой инстанции", "serviceType": "Представительство в суде"}, "url": "https://geridovich.ru/pricing.html"}
+    ]
+  },
+  "makesOffer": [
+    {"@type": "Service", "name": "Гражданские дела", "url": "https://geridovich.ru/services.html#civil"},
+    {"@type": "Service", "name": "Уголовные дела", "url": "https://geridovich.ru/services.html#criminal"},
+    {"@type": "Service", "name": "Административное право", "url": "https://geridovich.ru/services.html#admin"},
+    {"@type": "Service", "name": "Трудовое право", "url": "https://geridovich.ru/services.html#labor"}
+  ],
   "sameAs": ["https://yandex.ru/maps/org/advokat_geridovich_yu_a_/94572413059/"]
 }
 </script>
@@ -210,7 +246,7 @@
     <div class="container">
       <div class="cta-band">
         <h2>Нужна юридическая помощь?</h2>
-        <p>Опишите вашу ситуацию — я перезвоню и предложу дальнейшие шаги. Первичная консультация по телефону.</p>
+        <p>Опишите вашу ситуацию — я перезвоню и предложу дальнейшие шаги. Первичная консультация по телефону. Ответы на частые вопросы — в разделе <a href="/faq.html" style="color:var(--color-accent-strong);text-decoration:underline;text-underline-offset:3px">«Вопросы и ответы»</a>.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="tel:+79602642597">Позвонить сейчас</a>
           <a class="btn btn-on-dark" href="/contact.html">Оставить заявку онлайн</a>
@@ -235,6 +271,7 @@
         <li><a href="/pricing.html">Стоимость</a></li>
         <li><a href="/cases.html">Дела</a></li>
         <li><a href="/reviews.html">Отзывы</a></li>
+        <li><a href="/faq.html">Вопросы и ответы</a></li>
         <li><a href="/contact.html">Контакты</a></li>
       </ul>
     </div>
