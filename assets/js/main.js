@@ -1,6 +1,40 @@
 // Geridovich Advokat — shared site behavior (nav, lightbox, reveal, contact form)
+
+// Yandex.Metrika counter 113523362. Lives here rather than inline in every
+// page so each of the site's hand-written pages picks it up from one place.
+(function (m, e, t, r, i, k, a) {
+  m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); };
+  m[i].l = 1 * new Date();
+  for (var j = 0; j < document.scripts.length; j++) {
+    if (document.scripts[j].src === r) { return; }
+  }
+  k = e.createElement(t); a = e.getElementsByTagName(t)[0];
+  k.async = 1; k.src = r; a.parentNode.insertBefore(k, a);
+})(window, document, "script", "https://mc.yandex.ru/metrika/tag.js?id=113523362", "ym");
+
+ym(113523362, "init", {
+  ssr: true, webvisor: true, clickmap: true,
+  accurateTrackBounce: true, trackLinks: true
+});
+
 (function () {
   "use strict";
+
+  var METRIKA_ID = 113523362;
+  function goal(name) {
+    if (typeof window.ym === "function") window.ym(METRIKA_ID, "reachGoal", name);
+  }
+
+  // Count every tap on a phone number as a conversion — for this site a call
+  // is the outcome that matters, not a page view.
+  document.querySelectorAll('a[href^="tel:"]').forEach(function (a) {
+    a.addEventListener("click", function () { goal("PHONE_CLICK"); });
+  });
+
+  // Same for the mailto links in the footer and on the contact page.
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function (a) {
+    a.addEventListener("click", function () { goal("EMAIL_CLICK"); });
+  });
 
   // Mobile nav toggle
   var toggle = document.querySelector(".nav-toggle");
@@ -145,6 +179,7 @@
             status.className = "form-status is-success";
             status.textContent = "Спасибо! Заявка отправлена — я свяжусь с вами в ближайшее время.";
             form.reset();
+            goal("FORM_SENT");
           } else {
             status.className = "form-status is-error";
             status.textContent = "Не получилось отправить форму. Позвоните, пожалуйста: +7 960-264-25-97.";
